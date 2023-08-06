@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Présentation </title>
+	<link rel="shortcut icon" type="image/x-icon" href="IPNJGames%20logo simple.jpg" />   <!--  Icône dans le titre de l'onglet -->
+	<link rel="stylesheet" type="text/css" href="structure.css">
+</head>
+<body class="body" style="text-align:center;margin: auto;">
+<div style="margin-right:auto;text-align:left" id="present">
+<canvas id="canvas" width="650" height="350"></canvas>
+
+<a href="Level 1.html"> <button id="b1"> JOUER </button> </a>
+<audio src="Mfeel.mp3"  autoplay loop> Ma musique</audio>
+<script>
+
+var c = document.getElementById("canvas");
+var ctx = c.getContext("2d");
+
+////////////////////////   Titre  ///////////////////
+var gradient = ctx.createLinearGradient(0, 100, 100, 300); // créer un gradient avec 4 valeurs: (position de départ en x, position de départ en y, position de fin en x , position de fin en y)
+gradient.addColorStop("0.9", "darkblue");
+gradient.addColorStop("0.7", "green");
+gradient.addColorStop("0.3","yellow");		// les différentes couleurs du gradient et leur répartition (de 0 à 1)
+gradient.addColorStop("0", "red");
+
+ctx.font = "90px FuturistStencil, Impact, Calibri";  // taille et police du gradient
+ctx.fillStyle = gradient;  // associé le gradient au texte
+ctx.fillText("Blocks Breaker", 0, 90);  // créer le text avec sa position en x et y
+
+////////////////////////   Marque  ///////////////////
+ctx.font = "30px Alien Encounters";
+var gradient = ctx.createLinearGradient(400, 400, 100, 300);
+gradient.addColorStop("0.5", "rgba(0,150,250,1)");
+gradient.addColorStop("0.5", "white");
+// Fill with gradient
+ctx.fillStyle = gradient;
+ctx.fillText("PNJ GAMES", 450, 130);
+
+////////////////   Ligne du logo de la marque  //////////
+ctx.fillStyle="white";
+ctx.fillRect(471,136,175,2);
+ctx.fillRect(431,100,175,2);
+
+</script>
+<nav class="nav0">
+	<a href="Level 1.html"><button id="b4">Level 1</button></a>
+	<a href="Level 2.html"><button id="b4">Level 2</button></a>
+	<a href="Level 3.html"><button id="b4">Level 3</button></a>
+	<a href="Page commandes.html"><button id="b4">Commandes</button></a>
+	<a href="Page Formulaire.html"><button id="b4">Formulaire</button></a>
+	<a href="http://www.lycee-descartes.fr/"><button id="b4">Contacter</button></a>
+	<a href="Page Sources.html" style="margin-right: 0px;"><button id="b4">Sources</button></a>
+</nav>
+</div>
+</body>
+</html>

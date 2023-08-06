@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="IPNJGames%20logo simple.jpg" />   <!--  Icône dans le titre de l'onglet -->
+    <link rel="stylesheet" type="text/css" href="structure.css">
+    <title>Formulaire</title>
+</head>
+<body class="bodyF">
+    <div id="page">
+	<nav>
+        <ul id="menu">
+            <li>
+                <a style="color: red;width: 336px;">Menu</a>
+            </li>
+            <li>
+                <a style="width: 336px;" href="Accueil.html">Accueil</a>
+                <ul>
+                    <li>
+                        <a href="Page Sources.html">Sources</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a style="width: 336px;"> Levels </a>
+                <ul>
+                    <li>
+                        <a href="Level 1.html">Level 1</a>
+                    </li>
+                    <li>
+                        <a href="Level 2.html">Level 2</a>
+                    </li>
+                    <li>
+                        <a href="Level 3.html">Level 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a style="width: 336px;">Autre</a>
+                <ul>
+                    <li>
+                        <a href="Page commandes.html">Commandes</a>
+                    </li>
+                    <li>
+                        <a href="Page Formulaire.html">Formulaire</a>
+                    </li>
+                    <li>
+                        <a href="http://www.lycee-descartes.fr/">Nous contacter</a>
+                    </li>
+                </ul>
+
+            </li>
+        </ul>
+    </nav>
+
+<br><br>
+	
+    <canvas id="canvas4" width="900" height="150" style="margin-left: 200px;"></canvas>
+
+<form method="post" action="Présentation.html" style="color: red;font-size: 20px;">
+
+<fieldset><legend style="color: lime">Informations Identité</legend>
+<br>
+<label for="Nom">Quel est votre nom ? <span id="obli">*</span>:  </label><input type="text" name="Nom" id="Nom" placeholder="Ex: John Smith" required="Nom" autofocus="Nom" />
+<br><br>
+<label for="nationalité"> De quelle nationalité êtes vous ? : </label>
+<select name="nationalité" id="nationalité">
+<optgroup label="Europe">
+	<option value="Français">Français</option>
+	<option value="Espagnol">Espagnol</option>
+	<option value="Anglais">Anglais</option>
+	<option value="Allemand">Allemand</option>
+</optgroup>
+<optgroup label="Amérique">
+	<option value="Américain">Américain</option>
+	<option value="Canadien">Canadien</option>
+	<option value="Américain">Mexicain</option>
+	<option value="Asiatique">Brésilien</option>
+</optgroup>
+<optgroup label="Asie">
+	<option value="Chinois">Chinois</option>
+	<option value="Japonais">Japonais</option>
+	<option value="Russe">Russe</option>
+	<option value="Indien">Indien</option>
+</optgroup>
+<optgroup label="Afrique">
+	<option value="Marocain">Marocain</option>
+	<option value="Malien">Malien</option>
+	<option value="Egyptien">Egyptien</option>
+	<option value="Congolais">Congolais</option>
+</optgroup>
+</select>
+<label for="Autre">Autre : </label>
+<input name="Autre" id="Autre" placeholder="Ex: Australien"></input>
+<br><br>
+<label for="Age">Quel âge avez-vous ? : </label>
+<input type="number" name="Age" id="Age" max="100" min="0" placeholder="Ex: 50" />
+</fieldset>
+
+<br>
+
+<fieldset><legend style="color: lime">Informations Jeu</legend>
+Avez-vous aimez notre jeu ? <span id="obli">*</span> :<br />
+<input type="radio" name="avis" value="Oui" id="Oui" required="avis" /> <label
+for="Oui">Oui</label><br />
+<input type="radio" name="avis" value="Non" id="Non" />  <label
+for="Non">Non</label><br />
+<input type="radio" name="avis" value="Je sais pas" id="Je sais pas"/><label for="Je sais pas">Je sais pas</label>
+<br><br>
+Quelle note nous attriburiez-vous ? <span id="obli">*</span>: <input type="number" name="note" min="0" max="20" placeholder="Ex:15" step="0.5" required="note" />
+<br><br>
+Avez-vous des commentaires ? : <br> <textarea cols="50" rows="5" placeholder="Ex: Il n'y a pas assez de niveaux." maxlength="312"></textarea>
+</fieldset>
+</p>
+<p id="info">* obligatoire</p>
+<input type="submit" value="Envoyer" id="envoyer" style="font-size: 25px; margin-left: 500px;color: blue;background-color: yellow;border:none;border-radius: 5px;" />
+<input type="reset" value="Reset" style="font-size: 25px; margin-left: 40px;color: blue;background-color: yellow;border:none;border-radius: 5px;margin-bottom: 10px" />
+</form>
+
+<script>
+    var ca = document.getElementById("canvas4");
+var ctx = ca.getContext("2d");
+
+ctx.font = "50px verdana"
+// Create gradient
+var gradient = ctx.createLinearGradient(0, 80, 600, 80);
+gradient.addColorStop("0","purple");
+gradient.addColorStop("0.15", "blue");
+gradient.addColorStop("0.3", "cyan");
+gradient.addColorStop("0.45", "yellow");
+gradient.addColorStop("0.6", "lime");
+gradient.addColorStop("0.75", "orange");
+gradient.addColorStop("1","red");
+// Fill with gradient
+ctx.fillStyle = gradient;
+ctx.fillText("Merci d'avoir joué à Blocks Breaker", 0, 80);
+
+	var envoyer = document.getElementById("envoyer");
+envoyer.onclick=function() {
+	alert("Merci d'avoir répondu à ce questionaire.");
+}
+
+sfHover = function() {
+        var sfEls = document.getElementById("menu").getElementsByTagName("LI");
+        for (var i=0; i<sfEls.length; i++) {
+                sfEls[i].onmouseover=function() {
+                        this.className+=" sfhover";
+                }
+                sfEls[i].onmouseout=function() {
+                        this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+                }
+        }
+}
+if (window.attachEvent) window.attachEvent("onload", sfHover);
+</script>
+
+<footer>Part <blink><em>PNJ Games</em></blink> &nbsp; en association avec le lycee Rene Descartes 
+    <br> Merci et a bientot ! &reg;
+</footer>
+</div>
+</body>
+</html>

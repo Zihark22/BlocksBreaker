@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="IPNJGames%20logo simple.jpg" />   <!--  Icône dans le titre de l'onglet -->
+    <link rel="stylesheet" type="text/css" href="structure.css">
+    <title>Game Over</title>
+</head>
+<body style="background-color: black;">
+    <div style="text-align: center;">
+    <canvas id="canvas3" width="600" height="350"></canvas>
+
+    <script>
+
+var ca = document.getElementById("canvas3");
+var ctx = ca.getContext("2d");
+
+ctx.font = "80px BatmanForeverOutline, Copperplate Gothic Bold";
+// Create gradient
+var gradient = ctx.createLinearGradient(0, 80, 600, 80);
+gradient.addColorStop("0","red");
+gradient.addColorStop("0.15", "orange");
+gradient.addColorStop("0.45", "white");
+gradient.addColorStop("0.3", "yellow");
+gradient.addColorStop("0.6", "yellow");
+gradient.addColorStop("0.75", "orange");
+gradient.addColorStop("1","red");
+// Fill with gradient
+ctx.fillStyle = gradient;
+ctx.fillText("Game Over", 0, 80);
+
+ctx.font = "30px verdana";
+// Create gradient
+var gradient = ctx.createLinearGradient(0, 100, 100, 150);
+gradient.addColorStop("0.5", "white");
+gradient.addColorStop("1", "gold");
+// Fill with gradient
+ctx.fillStyle = gradient;
+ctx.fillText("Restart :", 20, 160);
+
+var over = document.createElement('audio');
+    over.src = 'MGameOver.wav';
+    over.play();
+var voix = document.createElement('audio');
+    voix.src = 'Mvoix over.wav';
+    voix.play();
+</script>
+<a href="Level 1.html"><button id="b2">YES</button></a>
+<a href="Page Formulaire.html"><button id="b3">NO</button></a>
+<img src="Iover.jpg" id="img">
+</div>
+</body>
+</html>

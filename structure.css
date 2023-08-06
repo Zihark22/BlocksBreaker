@@ -1,0 +1,304 @@
+/* ADAPTATION POUR LA PAGE DE PRESENTATION */
+@media screen and (max-width: 1999px) {
+  .body {
+    height: 600px;
+	  width: 	1336px;
+  }
+  #b1 {
+    font-size: 40px;
+	  margin-left: -430px;
+    margin-top: 330px;
+	  margin-right: 15px;
+  }
+  .nav0 {
+	  margin-left: 420px;
+	  margin-bottom: 70px;
+    width: 450px;
+    background-color: none;
+  }
+  #present {
+    height: 600px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .body {
+    height: 1000px;
+	  width: 2250px;
+  }
+  #present {
+    height: 1000px;
+  }
+  #b1 {
+  	font-size: 80px;
+	  margin-left: -950px;
+	  margin-top: 500px;
+	  margin-bottom: -40px;
+  }
+  #canvas {
+  	width: 70%;
+  	height: 70%;
+  }
+  .nav0 {
+  		margin-top: -50px;
+  		margin-left: 300px;
+  		width: 1600px;
+  }
+}
+/*-------------------------------------*/
+.body {             /* body page de présentation  */
+  margin: auto;
+  border: 10px red double;
+  border-radius: 200px;
+  background-color: black;
+}
+.body2 {                    /* body des levels*/
+	margin: 0;
+  background-color: rgba(0,0,0,0.8);
+}
+.bodyF {            /* body du formulaire */
+	margin: 0;
+}
+#canvas {           /* Canvas de la page de présentation */
+	margin-left: 350px;
+	margin-top: 100px;
+}
+#canvas1 {            /* Canvas des jeux */
+	background-image: url('IE.jpg');
+  background-size: 145%;
+  background-repeat: no-repeat;
+	background-position: top;
+  background-color: #330066;
+  margin-top: -20px;
+}
+#canvas3 {             /* Canvas des pages GameOver et Fin */
+	margin: 0;
+}
+#b1 {               /* Bouton de départ pour jouer */
+	color: red;
+  background-color: white;
+	font-family: Alien Encounters,BatmanForeverAlternate,Colibri;
+  border: 3px solid green;
+	position:absolute;
+  border-radius: 10px;
+}
+#b2 {              /* Bouton oui de GameOver.html */
+	color: white;
+	font-size: 30px;
+	font-family: Colibri;
+	border: none;
+	position: absolute;
+	margin-top: 130px;
+	margin-left: -360px;
+	background-color: black;
+}
+#b3 {                /* Bouton non de GameOver.html   */
+	color: gold;
+	font-size: 30px;
+	font-family: Colibri;
+	border: none;
+	position: absolute;
+	margin-top: 130px;
+	margin-left: -160px;
+	background-color: black;
+}
+#b4 {                         /* Boutons du menu de navigation  */
+	border: 2px solid white;
+	background-color: "none";
+  margin: 5px;
+  border-radius: 7px;
+  color: rgba(0,0,150,0.8);
+  font-family: BatmanForeverAlternate;
+  padding: 5px;
+  text-align: center;
+}
+#fin {               /* Bouton de fin du jeux   */
+  color: red;
+  font-size: 30px;
+  font-family: Colibri;
+  border: none;
+  margin-top: 180px;
+  margin-left: -360px;
+  background-color: black;
+}
+#b1:hover {
+	  background-image: url("Ibouton.jpg");
+    background-position: center;
+    background-size: 70px;
+    border: 1px solid rgb(50, 55, 224);
+    background-color: black;
+}
+#b2:hover {
+	color:darkblue;
+}
+#b3:hover {
+	color: red;
+}
+#b4:hover {
+	color: red;
+  border: 2px solid orange;
+}
+#fin:hover {
+	color: white;
+	border: 3px red solid;
+}
+#img {
+	height: 350px;
+	width: 600px;
+	margin-left: -600px;
+	margin-top: 200px;
+	position: absolute;
+}
+#obli {              /* Pour le formulaire */
+    color: goldenrod;
+}
+#info {             /* Pour le formulaire */
+    color: goldenrod;
+    margin-left: 20px;
+    margin-top: -15px;
+}
+#menu, #menu ul /* Liste */    {
+  padding : 0; /* pas de marge intérieure */
+  margin: 0;
+  list-style : none; /* on supprime le style par défaut de la liste */
+  line-height : 21px; /* on définit une hauteur pour chaque élément */
+  text-align : center; /* on centre le texte qui se trouve dans la liste */
+}
+#menu /* Ensemble du menu */
+{
+    font-weight : bold; /* on met le texte en gras */
+    font-family : Arial; /* on utilise Arial, c'est plus beau ^^ */
+    font-size : 20px; /* hauteur du texte : 12 pixels */
+    display: flex;
+    justify-content: center;
+}
+.body2 #page {
+  text-align: center;
+}
+.bodyF #page {
+	width: 1350px;
+  background-color: black;
+  margin: auto;
+}
+.body2 #menu a 
+{
+    display : block;
+    background : white;        
+    color : rgba(0,150,250,0.8); 
+    text-decoration : none;
+    padding: 5px;
+    border-left: 1px solid black;
+    width: 328px;
+}
+.bodyF #menu a 
+{
+    display : block; 
+    padding : 0; 
+    background : white;        
+    color : rgba(0,150,250,0.8); 
+    text-decoration : none; 
+    width: 339px;
+    height: 27px;
+}
+#menu li /* Éléments des listes */      
+{ 
+        float : left; 
+        /* pour IE qui ne reconnaît pas "transparent" */
+        border-right : 1px solid black; /* on met une bordure blanche à droite de chaque élément */
+}
+#menu li ul /* Sous-listes */
+{ 
+        position: absolute; /* Position absolue */
+        width: 5px; /* Largeur des sous-listes */
+        height: 14px;
+        left: -999em; /* Hop, on envoie loin du champ de vision */
+}
+#menu li ul li /* Eléments de sous-listes */
+{
+        /* pour ie qui ne reconnaît pas "transparent" (comme précédemment) */
+        border-top : 2px solid black; /* on met une bordure blanche en haut de chaque élément d'une sous-liste */
+}
+/* IE ne reconnaissant pas le sélecteur ">" */
+html>body #menu li ul li                
+{
+        border-top: 2px solid black; /* on met une bordure transparente en haut de chaque élément */
+}
+#menu li ul ul 
+{
+        margin: -25px 0 0 226px ; /* On décale les sous-sous-listes pour qu'elles ne soient pas au dessus des sous-listes */ 
+        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+        border-left: 1px solid black ; /* Petite bordure à gauche pour ne pas coller ... */      
+}
+.body2 #menu a:hover, .bodyF #menu a:hover /* Lorsque la souris passe sur un des liens */    
+{
+        color: gold; /* On passe le texte en noir... */
+        background: black; /* ... et au contraire, le fond en blanc */
+        border-top: 2px solid rgba(0,150,250,0.8);
+}
+#menu li:hover ul, #menu li li:hover ul, #menu li.sfhover ul, #menu li li.sfhover ul  /* Sous-listes lorsque la souris passe sur un élément de liste ET sous-sous-lites lorsque la souris passe sur un élément de sous-liste */
+{
+        left: auto; /* Repositionnement normal */
+        min-height: 0; /* Corrige un bug sous IE */
+}
+.body2 #menu li ul li a, .bodyF #menu li ul li a
+{
+     	color: purple;
+     	font-family: BatmanForeverAlternate, Impact;
+     	background-color: white;
+}
+a {
+	text-shadow: 3px 3px 2px rgba(50,50,50,0.5);
+}
+#commandes {
+	height: 90%;
+	width: 90%;
+}
+fieldset {
+	width: 1200px;
+	margin-left: 20px;
+}
+footer {
+	font-size: 22px;
+	font-family: Alien Encounters, verdana;
+	background-color: #4B0082;
+	color: cyan;
+	text-align: center;
+	padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  width: 1349px;
+}
+#present {
+    background-image: url('IH.jpg');
+    background-position: center;
+    background-size: 100%;
+    border-radius: 200px;
+}
+.body2 #droits a {
+      color: green;
+      text-decoration: none;
+      text-shadow: none;
+      font-size: 25px;
+      font-family: gothic,verdana;
+}
+.body2 #droits a:hover {
+  border: none;
+  color: white;
+}
+h1 {
+  color: rgba(0,150,250,0.8);
+  font-family: Calibri, verdana;
+  font-size: 30px;
+}
+.body2 #droits {
+  margin-top: -80px;
+}
+.nav0{
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: black;
+  background-image: url("univers.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  text-align: center;
+}

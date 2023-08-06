@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="IPNJGames%20logo simple.jpg" />   <!--  Icône dans le titre de l'onglet -->
+    <script src="Level 3.js"></script>
+    <link rel="stylesheet" type="text/css" href="structure.css">
+    <title>Projet Final: Level 3</title>
+</head>
+<body class="body2">
+    <div id="page">
+    <nav>
+        <ul id="menu">
+            <li>
+                <a style="color: red;">Menu</a>
+            </li>
+            <li>
+                <a href="Accueil.html">Accueil</a>
+                <ul>
+                    <li>
+                        <a href="Page Sources.html">Sources</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a> Levels </a>
+                <ul>
+                    <li>
+                        <a href="Level 1.html">Level 1</a>
+                    </li>
+                    <li>
+                        <a href="Level 2.html">Level 2</a>
+                    </li>
+                    <li>
+                        <a href="Level 3.html">Level 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a>Autre</a>
+                <ul>
+                    <li>
+                        <a href="Page commandes.html">Commandes</a>
+                    </li>
+                    <li>
+                        <a href="Page Formulaire.html">Formulaire</a>
+                    </li>
+                    <li>
+                        <a href="http://www.lycee-descartes.fr/">Nous contacter</a>
+                    </li>
+                </ul>
+
+            </li>
+        </ul>
+    </nav>
+
+<br><br>
+
+    <canvas id="canvas1" width="650" height="580"></canvas>
+
+    <div id="compteur" style="display: none"></div>
+
+   <audio src="MPhantom.mp3" autoplay loop> Ma musique</audio>
+</div>
+
+   <script type="text/javascript">
+        sfHover = function() {
+        var sfEls = document.getElementById("menu").getElementsByTagName("LI");
+        for (var i=0; i<sfEls.length; i++) {
+                sfEls[i].onmouseover=function() {
+                        this.className+=" sfhover";
+                }
+                sfEls[i].onmouseout=function() {
+                        this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+                }
+        }
+}
+if (window.attachEvent) window.attachEvent("onload", sfHover);
+
+</script>  
+    
+</body>
+</html>

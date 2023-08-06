@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="IPNJGames%20logo simple.jpg" />   <!--  Icône dans le titre de l'onglet -->
+    <link rel="stylesheet" type="text/css" href="structure.css">
+    <title>The End</title>
+</head>
+<body style="background-color: black;">
+	<div style="text-align: center;">
+    <canvas id="canvas3" width="600" height="350"></canvas>
+
+    <script>
+
+var ca = document.getElementById("canvas3");
+var ctx = ca.getContext("2d");
+
+ctx.font = "80px BatmanForeverOutline, Copperplate Gothic Bold, verdana";
+// Create gradient
+var gradient = ctx.createLinearGradient(50, 250, 510, 280);
+gradient.addColorStop("0","red");
+gradient.addColorStop("0.15", "orange");
+gradient.addColorStop("0.3", "yellow");
+gradient.addColorStop("0.35", "white");
+gradient.addColorStop("0.55", "white");
+gradient.addColorStop("0.6", "yellow");
+gradient.addColorStop("0.75", "orange");
+gradient.addColorStop("1","red");
+// Fill with gradient
+ctx.fillStyle = gradient;
+ctx.fillText("The End", 50, 250);
+
+</script>
+<a href="Page Formulaire.html"><button id="fin">FIN</button></a>
+</div>
+</body>
+</html>

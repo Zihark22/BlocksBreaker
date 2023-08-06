@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="IPNJGames%20logo simple.jpg" />   <!--  Icône dans le titre de l'onglet -->
+    <link rel="stylesheet" type="text/css" href="structure.css">
+    <title>Game Over</title>
+</head>
+<body class="body2" style="background-color: black;">
+	<div id="page">
+    <nav>
+        <ul id="menu">
+            <li>
+                <a style="color: red;">Menu</a>
+            </li>
+            <li>
+                <a href="Accueil.html">Accueil</a>
+                <ul>
+                    <li>
+                        <a href="Page Sources.html">Sources</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a> Levels </a>
+                <ul>
+                    <li>
+                        <a href="Level 1.html">Level 1</a>
+                    </li>
+                    <li>
+                        <a href="Level 2.html">Level 2</a>
+                    </li>
+                    <li>
+                        <a href="Level 3.html">Level 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a>Autre</a>
+                <ul>
+                    <li>
+                        <a href="Page Commandes.html">Commandes</a>
+                    </li>
+                    <li>
+                        <a href="Page Formulaire.html">Formulaire</a>
+                    </li>
+                    <li>
+                        <a href="http://www.lycee-descartes.fr/">Nous contacter</a>
+                    </li>
+                </ul>
+
+            </li>
+        </ul>
+    </nav>
+<br><br><br>
+    <canvas id="canvas3" width="500" height="150" style="margin-left: 0px;"></canvas>
+<div id="droits">
+    <h1> Images libres de droit: </h1>
+	<a href="https://pixabay.com/"> Pixabay </a>
+	<h1> Musiques libres de droit: </h1>
+	<a href="https://freesound.org/search/?q=game+over&f=&s=score+desc&advanced=0&g=1"> Freesound </a>
+	<br><br>
+	<a href="http://dig.ccmixter.org/free"> Ccmixter </a>
+	<h1> Codage: </h1>
+	<a href="https://developer.mozilla.org/fr/"> Developer mozilla </a>
+	<br><br>
+	<a href="https://openclassrooms.com/">OpenClassroom </a>
+	<br><br>
+	<a href="https://www.w3schools.com/js/default.asp"> w3schools </a>
+</div>
+</div>
+
+    <script>
+
+var ca = document.getElementById("canvas3");
+var ctx = ca.getContext("2d");
+
+ctx.font = "80px BatmanForeverOutline"
+// Create gradient
+var gradient = ctx.createLinearGradient(0, 60, 600, 60);
+gradient.addColorStop("0","purple");
+gradient.addColorStop("0.15", "blue");
+gradient.addColorStop("0.3", "cyan");
+gradient.addColorStop("0.45", "yellow");
+gradient.addColorStop("0.6", "lime");
+gradient.addColorStop("0.75", "orange");
+gradient.addColorStop("1","red");
+// Fill with gradient
+ctx.fillStyle = gradient;
+ctx.fillText("SOURCES", 0, 60);
+</script>
+</body>
+</html>
